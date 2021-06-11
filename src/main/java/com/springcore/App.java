@@ -15,5 +15,7 @@ public class App
     	ApplicationContext ac=new ClassPathXmlApplicationContext("com/springcore/config.xml");
     	Student bean = (Student) ac.getBean("student1");
         System.out.println( bean );
+    	Student bean1 = (Student) ac.getBean("student2");
+        System.out.println( bean1 );
     }
 }
