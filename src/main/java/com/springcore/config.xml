@@ -6,8 +6,7 @@
     xmlns:c="http://www.springframework.org/schema/c"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
- <bean class="com.springcore.Addition" name="add">
- <constructor-arg name="a" value="1" type="int" index="0"/>
-  <constructor-arg name="b" value="2" type="int" index="1"/>
+ <bean class="com.springcore.lifecycle.Samosa" name="s">
+ <property name="price" value="2.5"/>
  </bean>
  </beans>
