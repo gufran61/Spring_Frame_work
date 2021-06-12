@@ -15,7 +15,8 @@ public class App
     {
     	
     	ApplicationContext ac=new ClassPathXmlApplicationContext("com/springcore/config.xml");
-    	Person bean = (Person) ac.getBean("p");
+    	Addition bean = (Addition) ac.getBean("add");
     	System.out.println(bean);
+    	bean.doSum();
     }
 }
