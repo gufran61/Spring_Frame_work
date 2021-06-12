@@ -15,10 +15,7 @@ public class App
     {
     	
     	ApplicationContext ac=new ClassPathXmlApplicationContext("com/springcore/config.xml");
-    	Emp bean = (Emp) ac.getBean("emp");
-    	System.out.println(bean.getName());
-    	System.out.println(bean.getAdress());
-    	System.out.println(bean.getCourse());
-    	System.out.println(bean.getPhones());
+    	A bean = (A) ac.getBean("aref");
+    	System.out.println(bean.getX()+" "+bean.getB());
     }
 }
