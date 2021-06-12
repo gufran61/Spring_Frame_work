@@ -3,6 +3,8 @@ package com.springcore;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
+
 /**
  * Hello world!
  *
@@ -13,9 +15,10 @@ public class App
     {
     	
     	ApplicationContext ac=new ClassPathXmlApplicationContext("com/springcore/config.xml");
-    	Student bean = (Student) ac.getBean("student1");
-        System.out.println( bean );
-    	Student bean1 = (Student) ac.getBean("student2");
-        System.out.println( bean1 );
+    	Emp bean = (Emp) ac.getBean("emp");
+    	System.out.println(bean.getName());
+    	System.out.println(bean.getAdress());
+    	System.out.println(bean.getCourse());
+    	System.out.println(bean.getPhones());
     }
 }

@@ -5,15 +5,28 @@
     xmlns:p="http://www.springframework.org/schema/p"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
- <bean class="com.springcore.Student" name="student1" p:studentId="1234" p:studentName="gufran" p:studentAdress="sakinaka"/>
- <!-- <property name="studentId" value="1234"/>
- <property name="studentName" value="gufran"/>
- <property name="studentAdress" value="sakinaka"/>
- </bean> -->
- <!-- this is our second bean -->
- <bean class="com.springcore.Student" name="student2" p:studentId="12" p:studentName="farid" p:studentAdress="sakinaka"/>
- <!-- <property name="studentId" value="12"/>
- <property name="studentName" value="farid"/>
- <property name="studentAdress" value="sakinaka"/>
- </bean> -->
+ <bean class="com.springcore.Emp" name="emp">
+ <property name="name" value="gufran" />
+ <property name="phones">
+ <list>
+ <value>9821021635</value>
+  <value>8828982102</value>
+  <value>9821021635</value>
+  <value>8828982102</value>
+ </list>
+ </property>
+ <property name="adress">
+ <set>
+ <value>sakinaka</value>
+ <value>kheranird</value>
+ <value>mumbai</value>
+ </set>
+ </property>
+ <property name="course">
+ <map>
+ <entry key="java" value="3months"/>
+ <entry key="mava" value="4months"/>
+ </map>
+ </property>
+ </bean>
  </beans>
