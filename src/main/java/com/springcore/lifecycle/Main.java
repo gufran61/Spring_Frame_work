@@ -7,8 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 public static void main(String[] args) {
 	AbstractApplicationContext ac = new ClassPathXmlApplicationContext("com/springcore/lifecycle/config.xml");
-	Samosa bean = (Samosa) ac.getBean("s");
-	System.out.println(bean.getPrice());
 	ac.registerShutdownHook();
+	/*
+	 * Samosa bean = (Samosa) ac.getBean("s"); System.out.println(bean.getPrice());
+	 */
+	
+	Pepsi pep = (Pepsi) ac.getBean("p");
+	System.out.println(pep);
 }
 }
