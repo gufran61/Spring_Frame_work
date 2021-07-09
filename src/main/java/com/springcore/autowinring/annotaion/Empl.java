@@ -1,9 +1,11 @@
 package com.springcore.autowinring.annotaion;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Empl {
-	//@Autowired
+	@Autowired
+	@Qualifier("address")
 private Adress address;
 
 public Empl() {
@@ -23,7 +25,7 @@ public void setAddress(Adress address) {
 public String toString() {
 	return "Empl [address=" + address + "]";
 }
-@Autowired
+//@Autowired
 public Empl(Adress address) {
 	super();
 	this.address = address;
