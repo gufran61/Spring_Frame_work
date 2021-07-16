@@ -20,4 +20,7 @@
  <value>sakinaka</value>
  <value>sakinaka</value>
  </util:list>
+ <bean class="com.springcore.sterotypeAnnotation.Teacher" id="t" scope="prototype">
+ 
+ </bean>
  </beans>
