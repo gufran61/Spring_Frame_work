@@ -2,11 +2,39 @@
 <beans  
     xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:util="http://www.springframework.org/schema/util" 
     xmlns:c="http://www.springframework.org/schema/c"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
- <bean class="com.springcore.lifecycle.Samosa" name="s">
- <property name="price" value="2.5"/>
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    <!-- stand alone list --> 
+    <util:list list-class="java.util.LinkedList" id="empList">
+    <value>gufran</value>
+     <value>imran</value>
+      <value>nazran</value>
+       <value>furqaan</value>
+    </util:list>
+    <!-- stand alone map -->
+    <util:map map-class="java.util.HashMap" id="empMap">
+    <entry key="java" value="5000"/>
+     <entry key="phython" value="5000"/>
+      <entry key="c" value="5000"/>
+    </util:map>
+    
+    <!-- stand alone properties -->
+    <util:properties id="dbconfig">
+    <prop key="driver">com.mysql.jdbc.Driver</prop>
+    <prop key="username">root</prop>
+    <prop key="password">root</prop>
+    <prop key="url">mysql:jdbc://localhost:3306/database</prop>
+    </util:properties>
+ <bean class="com.springcore.Emp" name="emp">
+ <property name="friends" ref="empList"/>
+  <property name="feesStructure" ref="empMap"/>
+  <property name="prop" ref="dbconfig"/>
  </bean>
  </beans>
