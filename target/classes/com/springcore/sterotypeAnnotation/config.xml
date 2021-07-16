@@ -14,4 +14,10 @@
     http://www.springframework.org/schema/util/spring-util-3.0.xsd">
     
  <context:component-scan base-package="com.springcore.sterotypeAnnotation"/>
+ <util:list list-class="java.util.ArrayList" id="list">
+ <value>sakinaka</value>
+ <value>sakinaka</value>
+ <value>sakinaka</value>
+ <value>sakinaka</value>
+ </util:list>
  </beans>
