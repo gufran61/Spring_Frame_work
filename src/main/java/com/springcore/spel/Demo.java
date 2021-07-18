@@ -15,6 +15,8 @@ private int y;
 	private double e;
 	@Value("#{new java.lang.String('gufran')}")
 	private String name;
+	@Value("#{8>3}")
+	private boolean isActive;
 public double getE() {
 		return e;
 	}
@@ -41,10 +43,7 @@ public void setZ(int z) {
 }
 @Override
 public String toString() {
-	return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
+	return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive + "]";
 }
-
-
-
 
 }
